@@ -1,0 +1,16 @@
+.addField {
+    margin: auto;
+    display: flex;
+}
+
+.addField * {
+    margin: auto;
+}
+
+.addField form {
+    margin: auto;
+}
+
+.addField form input {
+    margin-right: 1em;
+}

@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
+import AddField from "./comp/AddField";
+import TextFieldList from "./comp/TextFieldsList";
 import './App.css';
 
 function App() {
+  const [FieldList, setFieldList] = useState([]);
+  const addFieldHandler = (textData) => {
+    setFieldList((prevFieldList) => {
+      return [
+        ...prevFieldList,
+        { textData: textData, id: Math.random().toString() }
+      ];
+    });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AddField onAddField={addFieldHandler} />
+      <TextFieldList textFields={FieldList} />
     </div>
   );
 }

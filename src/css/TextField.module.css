@@ -1,0 +1,40 @@
+.textMode {
+    display: flex;
+    margin: auto;
+}
+
+.textMode * {
+    margin: auto;
+}
+
+.textMode p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 0 0 30rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+.textMode button {
+    margin-left: 3rem;
+}
+
+.textMode input {
+    margin-right: 3rem;
+}
+
+.editMode {
+    display: flex;
+    margin: auto;
+    width: 46.5%
+}
+
+.editMode input {
+    flex: 1 0 auto;
+    margin-right: 1.5rem;
+    margin-left: 3.7rem;
+}
+
+.editMode button {
+    margin-left: 1.5rem;
+}
